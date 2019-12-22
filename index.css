@@ -1,0 +1,15 @@
+@import "styles/utilcss.css";
+@import "styles/style.css";
+
+
+.popup {
+  width: 800px;
+  height : 500px;
+}
+
+#pet{
+  position: relative;
+  z-index: 1000;
+  height : 150px;
+  width: 150px;
+}

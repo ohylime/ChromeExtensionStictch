@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "MyPet",
+  "description": "Christmas present for Yuri",
+  "version": "0.0.1",
+  "background": {
+    "scripts": [
+      "event.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "48": "christmas-tree-48.png"
+  },
+  "browser_action": {
+    "default_title": "Compass Debug Thug",
+    "default_popup": "popup.html",
+    "default_icon" : "christmas-tree-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["./styles/utilcss.css","./styles/style.css","index.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": ["stitch.png","stitch2.gif", "stitchSad.gif","christmas-tree.png"]
+}
