@@ -10,12 +10,12 @@
     "persistent": true
   },
   "icons": {
-    "48": "christmas-tree-48.png"
+    "48": "./images/christmas-tree-48.png"
   },
   "browser_action": {
     "default_title": "Compass Debug Thug",
     "default_popup": "popup.html",
-    "default_icon" : "christmas-tree-48.png"
+    "default_icon" : "./images/christmas-tree-48.png"
   },
   "content_scripts": [
     {
@@ -27,5 +27,5 @@
   "permissions": [
     "activeTab"
   ],
-  "web_accessible_resources": ["stitch.png","stitch2.gif", "stitchSad.gif","christmas-tree.png"]
+  "web_accessible_resources": ["images/*"]
 }

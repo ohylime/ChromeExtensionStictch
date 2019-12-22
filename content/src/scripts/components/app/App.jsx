@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Draggable from 'react-draggable'
 import {gsap} from 'gsap';
-const normal = chrome.runtime.getURL('stitchSad.png');
-const laydown = chrome.runtime.getURL('stitch2.gif');
+const normal = chrome.runtime.getURL('/images/stitch.png');
+const stitchStomp = chrome.runtime.getURL('/images/stitch-stomp.gif');
+const stitchTatrum = chrome.runtime.getURL('/images/stitch-tantrum.gif');
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class App extends Component {
       document.onmousemove = stopCircle;
       this.setState({move:true});
     }else{
-     document.onmousemove = moveCircle48;
+     document.onmousemove = moveCircle;
       this.setState({move:false});
     }
   }
@@ -62,7 +63,7 @@ class App extends Component {
               Count: {this.props.count}
             </div>
           </Draggable>
-          <img  id="pet" onClick={this.onClickHandler} src={this.state.move ? normal : laydown}/>
+          <img  id="pet" onClick={this.onClickHandler} src={this.state.move ? normal : stitchStomp}/>
         </div>
     );
   }
