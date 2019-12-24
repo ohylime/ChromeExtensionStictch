@@ -48,14 +48,12 @@ class App extends Component {
 
 
   render(){
-    console.log(this.state,'State')
-    console.log(this.props,'props')
     return (
-        <div className="playground">
+        <span className='playground'>
           <Draggable>
             <img className={(this.props.petState) ? 'show' : 'hide'} id="pet" onClick={this.onClickHandler} src={this.state.move ? stitchTatrum : stitchStomp}/>
           </Draggable>
-        </div>
+        </span>
     );
   }
 }

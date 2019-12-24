@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-const Spinner = <div className="cx-animDotShift cx-animDotShift--xs"></div>;
-const DisableButton = <span><button className="cx-solidBtn cx-solidBtn--sm" disabled>Import Listing</button></span>
+const tree = chrome.runtime.getURL('/images/christmas-tree.png');
 
 class App extends Component {
   constructor(props) {
@@ -13,10 +12,6 @@ class App extends Component {
     }
     this.onClickHandler = this.onClickHandler.bind(this)
   }
-
-  componentDidMount() {
-  }
-
 
   onClickHandler(){
     const action  = (this.props.petState) ? 'HIDE_PET' : 'SHOW_PET';
@@ -29,10 +24,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className='textIntent-title2--strong'>
+      <div className='textIntent-title2--strong popup'>
         <div>
-        <h2> Merry Christmas Yuri!</h2>
-          <button className='cx-dangerBtn--sm' onClick={this.onClickHandler}>Click Here!</button>
+          <h2> Merry Christmas</h2>
+          <h3>Mr. Yuri P. !!</h3>
+          <p className='textIntent-caption2'>Aka : Potato </p>
+          <img className="tree" src={tree}/>
+          <button className='cx-solidBtn' onClick={this.onClickHandler}>Click Here!</button>
         </div>
       </div>
     );

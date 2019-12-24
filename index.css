@@ -3,8 +3,16 @@
 
 
 .popup {
-  width: 800px;
-  height : 500px;
+  width: 200px;
+  height: 375px;
+  text-align: center;
+  background: cadetblue;
+  padding: 10px;
+}
+
+.tree{
+  height : 200px;
+  width: 200px
 }
 
 #pet{
