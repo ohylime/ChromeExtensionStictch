@@ -16,13 +16,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    window.onmousemove =
-    document.addEventListener('click', () => {
-      this.props.dispatch({
-        type: 'ADD_COUNT'
-      });
-    });
-
   }
 
   petFollowMouse(e){
@@ -35,7 +28,7 @@ class App extends Component {
   onClickHandler(){
     let petElement = document.getElementById('pet');
     function moveCircle(e) {
-          gsap.to(petElement, {duration: 0.7, ease: 0.7, rotation: 360, x: e.pageX, y: e.pageY});
+          gsap.to(petElement, {duration: 0.5, ease: 0.5, rotation: 360, x: e.pageX, y: e.pageY});
     }
 
     function stopCircle() {
@@ -55,15 +48,13 @@ class App extends Component {
 
 
   render(){
-
+    console.log(this.state,'State')
+    console.log(this.props,'props')
     return (
         <div className="playground">
           <Draggable>
-            <div className="handle" >
-              Count: {this.props.count}
-            </div>
+            <img className={(this.props.petState) ? 'show' : 'hide'} id="pet" onClick={this.onClickHandler} src={this.state.move ? stitchTatrum : stitchStomp}/>
           </Draggable>
-          <img  id="pet" onClick={this.onClickHandler} src={this.state.move ? normal : stitchStomp}/>
         </div>
     );
   }
@@ -71,7 +62,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.count
+    count: state.count,
+    petState: state.petState
   };
 };
 

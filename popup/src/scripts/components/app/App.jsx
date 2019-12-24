@@ -15,27 +15,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('click', () => {
-      this.props.dispatch({
-        type: 'ADD_COUNT',
-        payload: 20
-      });
-
-      this.props.dispatch({
-        type: 'COMMAND_STANDBY'
-      });
-      this.props.dispatch({
-        type: 'COMMAND_SCRAPE_LISTING'
-      });
-    });
-
-
   }
 
 
   onClickHandler(){
-    this.setState({loading :true});
-    setTimeout(this.setState({loading:false, submitted :true}),3000)
+    const action  = (this.props.petState) ? 'HIDE_PET' : 'SHOW_PET';
+    console.log(action, 'Popup')
+    this.props.dispatch({
+      type: action
+    });
   }
 
 
@@ -43,12 +31,8 @@ class App extends Component {
     return (
       <div className='textIntent-title2--strong'>
         <div>
-        <h2> Compass MLS Extension</h2>
-          {
-            this.state.loading === true ? <Spinner/> : this.state.submitted === true ? <DisableButton/> :
-                <span><button className="cx-solidBtn cx-solidBtn--sm">Import Listing</button>
-      <p className="textIntent-micro"> Note this will create a draft </p></span>
-          }
+        <h2> Merry Christmas Yuri!</h2>
+          <button className='cx-dangerBtn--sm' onClick={this.onClickHandler}>Click Here!</button>
         </div>
       </div>
     );
@@ -58,8 +42,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     count: state.count,
-    command: state.command,
-    listing: state.listing
+    petState: state.petState
   };
 };
 
