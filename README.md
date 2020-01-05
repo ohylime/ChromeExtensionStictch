@@ -4,7 +4,7 @@ Chrome extension where Stitch will follow you around in your chrome browser. If 
 
 Created this chrome extension for friend who loves Stitch. 
 
-![Image of active pet](https://github.com/ohylime/StitchChromePet/blob/master/images/stitch-stomp.gif)
+![Image of active pet](https://github.com/ohylime/StitchChromePet/blob/master/images/stitch-stomp.gif?s=150)
 
 ## Getting Started
 
