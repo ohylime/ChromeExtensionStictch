@@ -1,5 +1,10 @@
 # 2019 Christmas Present
 
+Chrome extension where Stitch will follow you around in your chrome browser. If you get tired of him you can put him away or make him sit in the corder.
+
+Created this chrome extension for friend who loves Stitch. 
+
+![Image of active pet](https://github.com/ohylime/StitchChromePet/blob/master/images/stitch-stomp.gif)
 
 ## Getting Started
 
@@ -53,4 +58,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-* Hat tip to anyone whose code was used
+* Hat tip to anyone whose code/art was used
