@@ -7,15 +7,23 @@ import App from './components/app/App';
 
 const proxyStore = new Store();
 
+// Create React Anchor
 const anchor = document.createElement('div');
 anchor.id = 'rcr-anchor';
+anchor.style.width = '0';
+anchor.style.height = '0';
 
+// Append as firstNode on <body>
 document.body.insertBefore(anchor, document.body.childNodes[0]);
 
+/*
+ For some reason you can't document.getElementId does not work here.
+ Therefore grabbing first child of body which is now `anchor`
+ */
 proxyStore.ready().then(() => {
   render(
     <Provider store={proxyStore}>
       <App/>
     </Provider>
-   , document.getElementById('rcr-anchor'));
+   , document.body.childNodes[0]);
 });
