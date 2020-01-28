@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/gulp"
   },
-  "author": "Tyler Shaddix",
+  "author": "Emily Ho",
+  "husky": { "hooks": { "pre-commit": "pretty-quick --staged" } },
   "dependencies": {
     "@babel/register": "^7.7.0",
     "axios": "^0.19.0",
@@ -29,6 +30,9 @@
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.7",
+    "husky": "^4.2.1",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1",
     "rimraf": "^2.5.0",
     "webpack": "^2.6.0"
   }
