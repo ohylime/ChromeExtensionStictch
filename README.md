@@ -1,6 +1,6 @@
 # 2019 Christmas Present
 
-Chrome extension where Stitch will follow you around in your chrome browser. If you get tired of him you can put him away or make him sit in the corder.
+Chrome extension where Stitch will follow you around in your chrome browser. If you get tired of him you can put him away or make him sit in the corner.
 
 Created this chrome extension for friend who loves Stitch. 
 
@@ -35,23 +35,24 @@ A step by step series of examples that tell you how to get a development env run
     ``` 
     npm start
     ```
+    
+    There will be a new `build` directory created.
+    * Each time you make a change run this to make new build!
+    
+#### How to install in Chrome Browser
 
-3. Navigate to chrome://extensions/  in your chrome browser
- - Enable Developer Mode on left top corner tab
- - Click on Load Package
- - navigate to directory and select the build directory
-
+1. Navigate to chrome://extensions/  in your chrome browser
+2. Enable Developer Mode on left top corner tab
+3. Click on `Load Package`
+4. Navigate to directory and select the `build` directory
+5. Extension should Christmas Tree on Chrome Browser
 
 ## Built With
 
 * [NodeJS](https://nodejs.org) 
 * [React](http://reactjs.org/) - Dependency Management
-* [webext](https://github.com/tshaddix/webext-redux/wiki/Introduction) - Used to generate RSS Feeds
-*[GreenSock](https://greensock.com) Animations
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [webext](https://github.com/tshaddix/webext-redux/wiki/Introduction) - Useful Package to use React and Redux in Chrome Extension
+* [GreenSock](https://greensock.com) For Animations
 
 ## Authors
 * **Emily Ho** 
