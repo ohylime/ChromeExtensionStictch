@@ -9,9 +9,13 @@ const proxyStore = new Store();
 
 // Create React Anchor
 const anchor = document.createElement('div');
+
 anchor.id = 'rcr-anchor';
 anchor.style.width = '0';
 anchor.style.height = '0';
+// Prevent Ruining <body> that use Grid
+anchor.style.gridColumnEnd = '1';
+anchor.style.gridRowEnd = '1';
 
 // Append as firstNode on <body>
 document.body.insertBefore(anchor, document.body.childNodes[0]);
