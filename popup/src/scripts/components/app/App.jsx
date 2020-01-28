@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-const tree = chrome.runtime.getURL('/images/christmas-tree.png');
+import {ChristmasPopUp} from "./PopUpViews";
+
 
 class App extends Component {
   constructor(props) {
@@ -25,17 +26,12 @@ class App extends Component {
   render() {
     return (
       <div className='textIntent-title2--strong popup'>
-        <div>
-          <h2> Merry Christmas</h2>
-          <h3>Mr. Yuri P. !!</h3>
-          <p className='textIntent-caption2'>Aka : Potato </p>
-          <img className="tree" src={tree}/>
-          <button className='cx-solidBtn' onClick={this.onClickHandler}>Click Here!</button>
-        </div>
+       <ChristmasPopUp petStateHandler={this.onClickHandler} />
       </div>
     );
   }
 }
+
 
 const mapStateToProps = (state) => {
   return {
