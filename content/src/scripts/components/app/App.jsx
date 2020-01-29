@@ -28,16 +28,11 @@ class App extends Component {
   onClickHandler(){
     let petElement = document.getElementById('pet');
     function moveCircle(e) {
-          gsap.to(petElement, {duration: 0.5, ease: 0.5, rotation: 360, x: e.pageX, y: e.pageY});
-    }
-
-    function stopCircle() {
-      gsap.to(petElement,{duration: 0.7, ease: 0.7, rotation: 360, x: 75, y: 75}
-      );
+          gsap.to(petElement, {duration: 0.7, ease: 0.5, rotation: 360, x: e.pageX, y: e.pageY});
     }
 
     if(!this.state.move) {
-      document.onmousemove = stopCircle;
+      document.onmousemove = null;
       this.setState({move:true});
     }else{
      document.onmousemove = moveCircle;
