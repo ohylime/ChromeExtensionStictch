@@ -18,8 +18,13 @@
 #pet{
   position: relative;
   z-index: 1000;
-  height : 150px;
-  width: 150px;
+  height : 100px;
+  width: 100px;
+}
+
+#miniPet{
+  height : 50px;
+  width: 50px;
 }
 
 .hide{

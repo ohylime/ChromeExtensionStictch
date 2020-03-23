@@ -6,6 +6,7 @@ const normal = chrome.runtime.getURL('/images/stitch.png');
 const stitchStomp = chrome.runtime.getURL('/images/stitch-stomp.gif');
 const stitchTatrum = chrome.runtime.getURL('/images/stitch-tantrum.gif');
 
+
 class App extends Component {
   constructor(props) {
     super(props);
